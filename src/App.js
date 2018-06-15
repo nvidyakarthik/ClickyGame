@@ -23,13 +23,35 @@ const shuffle=(imageArray)=> {
 class App extends Component {
   
   state = {
-    cardImages
-
-     
+    cardImages,
+    score:0,
+    topscore:0,
+    message:"Click an image to begin!",
+    clickedCard:[]     
   };
-  shuffleImages = id => {    
+  shuffleImages = (id) => {    
     const cardImages=shuffle(this.state.cardImages); 
-    this.setState(cardImages); 
+    if(this.state.clickedCard.indexOf(id)===-1){
+      this.state.clickedCard.push(id);
+      this.setState({
+                      cardImages,
+                      score:this.state.score+1,
+                      topscore:this.state.score>=this.state.topscore?this.state.topscore+1:this.state.topscore,
+                      message:"You guessed correctly!",
+                      clickedCard:this.state.clickedCard,
+                    }); 
+
+    }
+    else{
+      this.setState({
+        cardImages,
+        score:0,
+        topscore:this.state.topscore,
+        message:"You guessed incorrectly!",
+        clickedCard:[]
+      }); 
+
+    }
     
   };
   render() {
@@ -37,8 +59,8 @@ class App extends Component {
       <div className="App">
         <Header>
           <Title>Clicky Game!</Title>
-          <Message message={"Click an image to begin!"}/>
-          <ScoreCard score={0} topscore={0}/> 
+          <Message message={this.state.message}/>
+          <ScoreCard score={this.state.score} topscore={this.state.topscore}/> 
         </Header>  
         <div className="container">
         <div className="row">
@@ -54,8 +76,7 @@ class App extends Component {
       ))}
       </div>
       </div>
-        <Footer/>
-        
+        <Footer/>        
       </div>
     );
   }
