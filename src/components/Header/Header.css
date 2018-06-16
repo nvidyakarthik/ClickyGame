@@ -1,6 +1,14 @@
 .navbar {
-    background-color: #e53344;
-
+    height: 65px;
+    overflow: hidden;
+    background-color: #e53344ad;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
 }
 .jumbotron {
     margin-bottom: 0px;
@@ -10,4 +18,7 @@
     background-repeat: no-repeat;
     color: white;
     text-shadow: black 0.3em 0.3em 0.3em;
+  }
+  .container .display-4{
+    font-family: 'Faster One', cursive;
   }

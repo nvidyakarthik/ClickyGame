@@ -7,6 +7,7 @@ import Title from './components/Title';
 import Message from './components/Message';
 import ScoreCard from './components/ScoreCard';
 import cardImages from './cardImage.json';
+import GameContainer from './components/GameContainer';
 
 const shuffle=(imageArray)=> {
   let j, x, i;
@@ -34,12 +35,12 @@ class App extends Component {
     if(this.state.clickedCard.indexOf(id)===-1){
       this.state.clickedCard.push(id);
       this.setState({
-                      cardImages,
-                      score:this.state.score+1,
-                      topscore:this.state.score>=this.state.topscore?this.state.topscore+1:this.state.topscore,
-                      message:"You guessed correctly!",
-                      clickedCard:this.state.clickedCard,
-                    }); 
+        cardImages,
+        score:this.state.score+1,
+        topscore:this.state.score>=this.state.topscore?this.state.topscore+1:this.state.topscore,
+        message:"You guessed correctly!",
+        clickedCard:this.state.clickedCard,
+      }); 
 
     }
     else{
@@ -61,21 +62,22 @@ class App extends Component {
           <Title>Clicky Game!</Title>
           <Message message={this.state.message}/>
           <ScoreCard score={this.state.score} topscore={this.state.topscore}/> 
-        </Header>  
-        <div className="container">
-        <div className="row">
-        {this.state.cardImages.map(cardImage => (
-        <div className="col-md-3">
-        <GameCard 
-          id={cardImage.id}
-          key={cardImage.id}
-          image={cardImage.image}
-          shuffleImage={this.shuffleImages}
-        />
-        </div>
-      ))}
-      </div>
-      </div>
+        </Header> 
+        <GameContainer> 
+          <div className="row">
+            {this.state.cardImages.map(cardImage => (
+               <div className="col-xs-12 col-md-3">
+                  <GameCard 
+                      id={cardImage.id}
+                      key={cardImage.id}
+                      image={cardImage.image}
+                      shuffleImage={this.shuffleImages}
+                  />
+                </div>
+            ))}
+          </div>
+        
+        </GameContainer>
         <Footer/>        
       </div>
     );
