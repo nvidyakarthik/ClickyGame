@@ -1,28 +1,26 @@
 .card {
-    background: #fff;
-    border-radius: 20px;
-    height: 155px;
-    margin: 8px;
-    position: relative;
-    width: 164px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #bc2f2f;
-    text-align: left;
-  }
-  
-  .card-body > .img-container {
-    padding:8px;
-    overflow: hidden;
-    text-align: center;
-  }
-  .card-body > .img-container > img {
-    width: 145px;
-    height: 137px;
-    padding: 2px;
-}
-.card-body {  
-  padding: 0px;  
+  background: #fff;
+  border-radius: 20px;
+  height: 155px;
+  margin: 8px;
+  position: relative;
+  width: 164px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #bc2f2f;
+  text-align: left;
 }
 
+.card-body>.img-container {
+  padding: 8px;
+  overflow: hidden;
+  text-align: center;
+}
 
-  
-  
+.card-body>.img-container>img {
+  width: 145px;
+  height: 137px;
+  padding: 2px;
+}
+
+.card-body {
+  padding: 0px;
+}

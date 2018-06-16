@@ -1,7 +1,7 @@
 import React from "react";
-import "./GameCard.css";
+import "./Gamecard.css";
 
-const GameCard = props => (
+const Gamecard = props => (
   <div className="card" onClick={()=>props.shuffleImage(props.id)}>
     <div className="card-body">
       <div className="img-container">
@@ -11,4 +11,4 @@ const GameCard = props => (
   </div>
 );
 
-export default GameCard;
+export default Gamecard;
