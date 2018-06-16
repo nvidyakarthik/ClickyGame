@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Header from './components/Header/Header.js';
-import Footer from './components/Footer/Footer.js';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
-import GameCard from './components/GameCard/GameCard.js';
-import Title from './components/Title/Title.js';
-import Message from './components/Message/Message.js';
-import ScoreCard from './components/ScoreCard/ScoreCard.js';
+import GameCard from './components/GameCard';
+import Title from './components/Title';
+import Message from './components/Message';
+import ScoreCard from './components/ScoreCard';
 import cardImages from './cardImage.json';
-import GameContainer from './components/GameContainer/GameContainer.js';
+import GameContainer from './components/GameContainer';
 
 const shuffle=(imageArray)=> {
   let j, x, i;
