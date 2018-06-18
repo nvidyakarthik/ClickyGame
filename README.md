@@ -24,3 +24,5 @@
 
 * type command `yarn start` 
 
+![Clicky Game](https://github.com/nvidyakarthik/burger/blob/master/public/assets/img/EatDaBurger.gif)
+
