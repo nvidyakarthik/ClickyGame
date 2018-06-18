@@ -2,6 +2,8 @@
 
 * A small memory game created using react.
 
+![Clicky Game](https://github.com/nvidyakarthik/ClickyGame/blob/master/public/images/Clickygame.png)
+
 ## How to Play
 
 * Click on any image card to play.
@@ -24,5 +26,5 @@
 
 * type command `yarn start` 
 
-![Clicky Game](https://github.com/nvidyakarthik/burger/blob/master/public/assets/img/EatDaBurger.gif)
+
 
